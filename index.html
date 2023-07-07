@@ -1,433 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/310bc8397d.js" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>محمد الموساوي</title>
     <style>
-        body{
-            font-family: 'font-awesome','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80');
-            /* background-size: cover; */
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 
-        }
-        li{
-            list-style:none;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        a:hover{
-            color:orange ;
-        }
-        header{
-            position: relative;
-            padding: 0 2rem;
-        }
-        .navbar .logo{
-            font-weight: bold;
-            font-size: 1.5rem;
-            padding: 3px;
-        }
-        .navbar .links{
-            display: flex;
-            gap: 2rem;
-            /* border: 1px solid white; */
-
-        }
-        .navG{
-            display: flex;
-            flex-flow: row nowrap;
-            /* border: 1px solid rgb(225, 0, 0); */
-
-        }
-        .navbar{
-            /* backdrop-filter: blur(12px); */
-            width: 100%;
-            height: 7vh;
-            margin: auto;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999;
-            background-color: #0000002d;
-            /* border: 1px solid white; */
-        }
-        .navbar .toggle-btn{
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
-        }
-        .action_btn{
-            background-color: orange;
-            color: white;
-            align-self: center;
-            padding: 0.5rem 1rem;
-            border:none;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            cursor: pointer;
-            width: auto;
-            height: auto;
-            margin: 10px;
-            transition: scale 0.2 ease;
-        }
-        .action_btn:hover{
-            scale: 1.05;
-            color: white;
-        }
-        .action_btn:active{
-            scale:0.95;
-        }
-        .drop_down{
-            /* z-index: 2; */
-            display: none;
-            margin:0 auto;
-            margin-top: 30px;
-            position: absolute;
-            right: 20vw;
-            left: 20vw; 
-            height: 260px;
-            top: 30px;
-            width: 60vw;
-            background-color: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(15px);
-            border-radius:10px ;
-            overflow: hidden;
-            transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .drop_down>li{
-            
-       
-            /* list-style-type: disc; */
-            align-items: center;
-        }
-        .drop_down>.links{
-            margin-top: 20px;
-            /* margin: 10px; */
-            display: flex;
-            flex-flow: column;
-            justify-content: space-around;
-            align-items: center;
-            height: 80%;
-            /* background-color: aqua; */
-        }
-        .drop_down .action_btn{
-            width: 100%;
-   
-        }
-
-        .drop_down>.close:hover{
-            color: orange;
-        }
-        .drop_down>.close{
-            background-color: rgba(240, 248, 255, 0);
-            color: white;
-            border: 0px;
-            margin:6px 6px;
-            float: right;
-            height: 40px;
-            width: 40px;
-
-        }
-        /* .close{
-            position: absolute;
-            top: 1px;
-            right: 1px;
-        } */
-        /* Global Styles */
-
-:root{
-    --backgw:white;
-    --backgb:black;
-    --textnave:#f7f7f7;
-    --color2:white;
-}
-@keyframes sec {
-  from {background-color: rgb(95, 220, 255);}
-  to {background-color: rgb(0, 123, 145);}
-  to {background-color: rgb(25, 221, 255);}
-}
-
-  .home {
-    /* background-image: url('https://www.ucly.fr/wp-content/uploads/2019/12/droit-code-civil.jpg');
-    background-size: cover;
-    background-position: center; */
-    color: #fff;
-    text-align: center;
-    /* padding: 100px 0; */
-    height: 100vh;
-
-    /* z-index: 0; */
-
-  }
-  section{
-    transition: 4s;
-  }
-  /* .hero::before{
-    content:'';
-    position: absolute;
-    top: -3rem;
-    left:-3rem;
-    right:-3rem;
-    bottom:-3rem;
-    z-index: 1;
-    opacity: 0.6;
-    background-color: #000000;
-
-  } */
-  .home2{
-    width: 100%;
-    height: 100vh;
-    /* background-color: #000000ac; */
-    /* z-index: 1; */
-    display: flex;
-    flex-flow: column ;
-    justify-content: center;
-    
-
-  }
-
-  .home h2 {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  .home p {
-    font-size: 19px;
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    margin-top: 60px;
-
-  }
-  .home img{
-    border-radius: 50%;
-    width: 200px;
-  }
-  
-  .btn {
-    align-self: center;
-    background-color: rgba(0, 0, 0, 0.21);
-    border: 1px solid rgb(248, 248, 248);
-    border-radius: 20px;
-    border: 1px solid rgb(255, 255, 255);
-    color: #ffffff;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    width: 120px;
-  }
-  
-  .btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 0 10px rgb(15, 1, 1);
-
-  }
-  
-  /* About Section */
-  .about {
-    background-color: #eee;
-    /* padding: 100px 0; */
-    height: 93vh;
-    text-align: center;
-    display: flex;
-    flex-flow: column ;
-    justify-content: center;
-    padding-top: 40px;
-    animation-name: sec;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-  }
-  .about .btn{
-    background-color: #000000;
-  }
-  .about .btn:hover{
-    background-color: #ffffff;
-    border: 1px solid black;
-    box-shadow: 0 0 30px rgb(255, 255, 255);
-  }
-  
-  /* .about *{ */
-    /* margin: 50px; */
-  /* } */
-  
-  .about h2 {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  .about p {
-    font-size: 24px;
-    margin-bottom: 50px;
-  }
-  
-  /* Services Section */
-  .services {
-    background-color: #fff;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    padding: 100px 0;
-    text-align: center;
-    height: 93vh;
-  }
-  
-  .services h2 {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  .services ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    margin: 50px 0 0;
-    padding: 0;
-  }
-  
-  .services li {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 24px;
-    margin: 10px;
-    padding: 20px;
-  }
-  
-  /* Testimonials Section */
-  /* .testimonials {
-    background-color: #eee;
-    padding: 100px 0;
-    text-align: center;
-  } */
-  
-  /* .testimonials h2 {
-    font-size: 48px;
-    margin: 0; */
-  /* }
-  
-  .testimonial {
-    background-color: #fff;
-    border-radius: 5px;
-    margin: 50px auto;
-    max-width: 800px;
-    padding: 50px;
-  }
-  
-  .testimonial p {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .testimonial .client {
-    font-size: 18px;
-    font-style: italic;
-  }
-   */
-  /* Contact Section */
-  .contact {
-    background-color: #000000;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .contact h2 {
-    font-size: 48px;
-    margin: 0;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    margin: 50px auto;
-  }
-  
-  label {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  input,
-  textarea {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    padding: 10px;
-  }
-  
-  button[type="submit"] {
-    background-color: #333;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #2b0101;
-    color: #e6e1e1;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-        /* .fa-solid:hover{
-
-        } */
-        @media(max-width:992px){
-            .navG{
-                display: none;
-            }
-            .navbar .toggle-btn{
-                display: block;
-            }
-
-        }
-        
     </style>
 </head>
 <body>
     <header>
         <div class="navbar">
-           <div class="logo"><a href="">M-AKO WebSite</a></div>
+           <div class="logo"><a href="">محمد الموساوي</a></div>
            <div class="navG">
             <ul class="links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">نبذة عنا</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#times">توقيت العمل</a></li>
             </ul>
-            <a href="" class="action_btn">Get Started</a>
+            <a href="#contact" class="action_btn">تواصل معنا</a>
         </div>
             <div class="toggle-btn" >
                 <i class="fa-solid fa-bars" ></i>
@@ -437,90 +34,142 @@
             <div class="drop_down">
                 <button class="close">X</button>
                 <ul class="links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="" class="action_btn">Get Started</a></li>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">نبذة عنا</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#times">توقيت العمل</a></li>
+                    <li><a href="#contact" class="action_btn">تواصل معنا</a></li>
                 </ul>
             </div>
         </div>
     </header>
     
-
-<!-- Hero Section -->
+<div class="sections">
+<!-- قسم الهيرو -->
 <section class="home" id="home">
   <div class="home2">
-      <!-- <div class="img"><img src="https://media.istockphoto.com/id/1130884625/vector/user-member-vector-icon-for-ui-user-interface-or-profile-face-avatar-app-in-circle-design.jpg?s=612x612&w=0&k=20&c=1ky-gNHiS2iyLsUPQkxAtPBWH1BZt0PKBB1WBtxQJRE=" alt=""></div> -->
-<h2>Experienced Lawyer</h2>
-<p>Providing legal services with the highest level of professionalism and integrity.</p>
-<a href="#contact" class="btn">Contact Us</a>
+      <div class="img"><img src="img/mohamed.png" alt=""></div>
+      <h2>محمد الموساوي</h2>
+<!-- <h3>محامي ذو خبرة</h3> -->
+<p>تقديم الخدمات القانونية بأعلى مستوى من الاحترافية والنزاهة</p>
+<a href="#contact" class="btn">تواصل معنا</a>
 </div>
 </section>
 
-<!-- About Section -->
+<!-- قسم عنا -->
 <section class="about" id="about">
-<h2>About Us</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum felis sit amet quam rhoncus euismod. Nulla facilisi. Quisque ut sapien nec risus facilisis aliquet. Aliquam faucibus vestibulum tortor, vitae accumsan lectus imperdiet eget. Sed in ipsum vel ex feugiat hendrerit. Sed mollis, eros vel tristique mattis, leo mauris blandit lectus, vel bibendum turpis justo ut risus. Donec aliquet turpis lacus, at convallis erat pellentesque vel. Sed sed est euismod, fermentum nisi sed, tincidunt augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur vel malesuada elit. </p>
-<a href="#contact" class="btn">Contact Us</a>
+<h2>نبذة عنا</h2>
+<p>نص تجريبي يمكن استبداله. </p>
+<a href="#contact" class="btn">تواصل معنا</a>
 </section>
 
-<!-- Services Section -->
+<!-- قسم خدماتنا -->
 <section class="services" id="services">
-<h2>Our Services</h2>
+<h2>خدماتنا</h2>
 <ul>
-  <li>Personal Injury Law</li>
-  <li>Criminal Defense Law</li>
-  <li>Family Law</li>
-  <li>Business Law</li>
-  <li>Estate Planning Law</li>
+  <li>القانون المدني</li>
+  <li>القانون الجنائي</li>
+  <li>القانون التجاري</li>
+  <li>قانون الأسرة</li>
+  <li>التنظيم العقاري</li>
 </ul>
-<a href="#contact" class="btn">Contact Us</a>
+<a href="#contact" class="btn">تواصل معنا</a>
 </section>
 
-<!-- Testimonials Section -->
-<!-- <section class="testimonials" id="testimonials">
-<h2>What Our Clients Say</h2>
-<div class="testimonial">
-  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dictum felis sit amet quam rhoncus euismod."</p>
-  <p class="client">- John Doe</p>
-</div>
-<div class="testimonial">
-  <p>"Nulla facilisi. Quisque ut sapien nec risus facilisis aliquet. Aliquam faucibus vestibulum tortor, vitae accumsan lectus imperdiet eget."</p>
-  <p class="client">- Jane Smith</p>
-</div>
-<a href="#contact" class="btn">Contact Us</a>
-</section> -->
+<section class="times" id="times">
+  <h2>توقيت العمل</h2>
+  <table>
+      <tr>
+          <th>إلى</th>
+          <th>من</th>
 
-<!-- Contact Section -->
+          <th>اليوم</th>
+
+      </tr>
+      <tr>
+          
+          <td>17:00</td>
+          <td>09:00</td>
+
+          <td>اللإثنين</td>
+      </tr>
+      <tr>
+          <td>17:00</td>
+          <td>09:00</td>
+
+          <td>الثلثاء</td>
+
+      </tr>
+      <tr>
+          <td>17:00</td>
+          <td>09:00</td>
+
+          <td>الأربعاء</td>
+
+      </tr>
+      <tr>
+          <td>17:00</td>
+          <td>09:00</td>
+
+          <td>الخميس</td>
+
+      </tr>
+      <tr>
+          <td>13:00</td>
+          <td>09:00</td>
+          <td>الجمعة</td>
+
+      </tr>
+      <tr>
+          <td>مغلق</td>
+          <td>مغلق</td>
+          <td>السبت</td>
+
+      </tr>
+      <tr>
+          <td>مغلق</td>
+          <td>مغلق</td>
+          <td>الأحد</td>
+
+      </tr>
+  </table>
+</section>
+<!-- قسم تواصل معنا -->
 <section class="contact" id="contact">
-<h2>Contact Us</h2>
-<form>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-  
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" required></textarea>
-  
-  <button type="submit" class="btn">Send Message</button>
-</form>
+<h2>تواصل معنا</h2>
+<div class="contacts">
+  <div class="emailIMG"><a href="mailto:elmoussaoui.lawyer.2002@gmail.com?subject=Contact%20Request&body=Please%20contact%20me%20at%20your%20earliest%20convenience"><img src="img/icons8-email-sign-100.png" alt="email"><h3>الإيمايل</h3></a></div>
+  <div><a href="https://wa.link/5px32j" target="_blank"><img src="img/icons8-whatsapp-100.png" alt="whatsapp"><h3>الواتساب</h3></a></div>
+  <div><a href="tel:+212661448049"><img src="img/icons8-phonecall-100.png" alt="phonecall"><h3>الهاتف</h3></div></a>
+  </div>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.841602673775!2d-6.838310580704266!3d34.022276584024254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76c7637b3e537%3A0x235356c09234303f!2sn12%2C%2014%20Rue%20Yougoslavie%2C%20Rabat!5e0!3m2!1sen!2sma!4v1688149988485!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <h3> +العنوان:  14 شارع يوغوسلافيا ، رقم 12 الرباط ، المغرب / فاكس ثابت : 212537709938</h3>
+
 </section>
+<footer>
+  <p>جميع الحقوق محفوظة © 2023</p>
+</footer>
+</div>
 
-    <script>
-        document.querySelector(".toggle-btn").addEventListener("click",()=>{
-            document.querySelector(".drop_down").style.display ="block";
+<script>
+     document.querySelector(".toggle-btn").addEventListener("click",()=>{
+    let drop_down =document.querySelector(".drop_down");
+    if(drop_down.style.display ==="none"){
+      drop_down.style.display ="block";
+    }else{
+      drop_down.style.display ="none";
+    }
 
 
-        })
-        document.querySelector(".close").addEventListener("click",()=>{
-            document.querySelector(".drop_down").style.display ="none";
-            // alert("walo!!")
+  })
+  document.querySelector(".close").addEventListener("click",()=>{
+      document.querySelector(".drop_down").style.display ="none";
+      // alert("walo!!")
 
-        })
-        
-    </script>
+  })
+
+</script>
+
 </body>
 </html>
