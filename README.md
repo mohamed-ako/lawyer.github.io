@@ -8,7 +8,7 @@ This project is a profile website for a lawyer, designed to showcase their profe
 </li></ul>
 <ul><li><b>Responsive Design: </b></li>Ensures that the website looks good on all devices.</ul>
 
-Tech Stack
+## Tech Stack
 <ul><li><b>HTML: </b>For structuring the content.</li></ul>
 <ul><li><b>CSS: </b>For styling and layout.</li></ul>
 <ul><li><b>JavaScript: </b>For interactive elements and dynamic content.</li></ul>
